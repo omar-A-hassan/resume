@@ -1,0 +1,168 @@
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Omar Hassan} & Email : \href{mailto:es-omar.hagag2027@alexu.edu.eg}{es-omar.hagag2027@alexu.edu.eg}\\
+  \href{https://github.com/omar-A-hassan}{github.com/omar-A-hassan} & LinkedIn : \href{https://www.linkedin.com/in/omar-hassan-a0b356220}{linkedin.com/in/omar-hassan} \\
+\end{tabular*}
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+  \item{ \textbf{ML/AI}{: PyTorch, TensorFlow, scikit-learn, AutoML (H2O), geomloss, PEFT, SFT, RL, ONNX, CTranslate2} }
+  \item{ \textbf{Languages \& Tools}{: Python, REST/FastAPI, Gradio, Pydantic, Git, DVC, LFS, Docker, Conda} }
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Alexandria university}{Alexandria, EG}
+      {Bachelor of Engineering in Biomedical Engineering;  GPA: 3.13}{Aug. 2022 -- Dec. 2027}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {SmartCI center FOE}{Alexandria, EG}
+      {TinyML research intern}{Oct 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Caption-LSTM}
+          {Researching the use of Lstms in Vision tasks such as image captioning and deployment on resource constrained devices as a lightweight alternative to Vision transformers. }
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Made in Alexandria (M.I.A) Robotics}{Alexandria, EG}
+      {AI Engineer}{Sep 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Benchmark Nllb200}
+          {Added benchmarking support of ARZ Egyptian Arabic text translation to English and vice versa to (LM Evaluation Harness) with Meta's Nllb200 measuring BLEU, CHRF and BERT scores. }
+        \resumeItem{Benchmark Whisper}
+          {Expanded upon an already establish Speech to Text models evaluation and benchmarking framework (Pico-Voice) to benchmark OpenAI's Whisper capabilities in Transcribing ARZ Egyptian Arabic speech into Arabic and English text measuring RTF, WER and BLEU scores.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Scientific innovation dynamics (SID) }{Alexandria, EG}
+      {Applied ML and AI researcher}{July 2024 - Sep 2025}
+      \resumeItemListStart
+        \resumeItem{Pytorch data pipeline}
+          {Transferred a mainly Scipy signal processing pipeline applying various filters, preprocessing techniques and normalization to PCG signals to a Pytorch dataset class leveraging Gpu acceleration (P100) speeding up processing times from 5 hours on 8000 PCG's to 40 minutes .}
+        \resumeItem{PCG Data collection}
+          {Collected and Curated 8000 PCG audio recordings spanning multiple sources that later got fed to the Pytorch data pipeline.}
+        \resumeItem{CNN MFCC baseline model}
+          {Built a baseline CNN classifier for unhealthy heartsounds detection using MFCCS achieving an F1 score of 0.7.}
+        \resumeItem{Microfluidic live cell separation}
+          {Designed end to end a Microfluidic cell separator using live cell imagery detecting the target cell using Yollov11 replacing cell staining and tagging.}
+        \resumeItem{Yolov11 baseline}
+          {Pretrained Yolov11 on 1.8 mil+ phase contrast cell imagery, achieving mAP50 0.702, mAP50–95 0.436, Precision 0.813 and Recall 0.581. Considering the imbalanced dataset and high overlap of cells in most imagery.}
+        
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ESRI North Africa}{Cairo, EG}
+      {GIS Intern}{June 2025 - July 2025}
+      \resumeItemListStart
+        \resumeItem{Presto-GeoAI}
+          {Fine tuned Presto a foundational GeoAI model for the task of Classifying 3 crop types across Africa as my internship project and as part of a global competition on Zindi, achieving position 37 on the leaderboard, finally I added an export layer that integrates the model's output into Esri's ArcGIS suite where you can view the results as a feature layer.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Faculty of Dentistry STDF Grant Proposal}{Alexandria, EG}
+      {Research Intern}{May 2025 - June 2025}
+      \resumeItemListStart
+        \resumeItem{AI-Assisted Modeling and Optimization of 3D
+Bioprinted Grafts for Wound Healing}
+          {Proposed a novel AI solution to model patient and task specific Bioink formulations and wound healing scaffolds ensuring maximum compatibility and potency.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Shato Robotic Assistant}
+      {A voice controlled robotic assistant that can navigate it's enviroment. Built using microservices archticture and at it's core a Gemma 3 270 mil LLm fine tuned on a custom instruction dataset (SFT lora with unsloth). }
+    \resumeSubItem{XAI with CNNs}
+      {Fine tuned pre-trained ResNet-34 and MobileNetV2 on Caltech 101 dataset. Implemented Adversarial Attacks, Systematically evaluated model robustness against Fast Gradient Sign Method (FGSM) attacks using torchattacks. applied Grad-CAM and vanilla gradient saliency mapping for explainabilty. Implemented and evaluated defensive strategies against adversarial attacks.}
+    \resumeSubItem{Virtual Cell challenge 2025 CAPE-model}
+      {Cape is a virtual cell model aimed at accurately predicting cell state after Crispri gene perturbation. I was responsible for implementing multiple loss functions including wasserstien loss using geomloss.}
+
+  \resumeSubHeadingListEnd
+
+
+\end{document}
