@@ -161,6 +161,12 @@ Bioprinted Grafts for Wound Healing}
       {Fine tuned pre-trained ResNet-34 and MobileNetV2 on Caltech 101 dataset. Implemented Adversarial Attacks, Systematically evaluated model robustness against Fast Gradient Sign Method (FGSM) attacks using torchattacks. applied Grad-CAM and vanilla gradient saliency mapping for explainabilty. Implemented and evaluated defensive strategies against adversarial attacks.}
     \resumeSubItem{Virtual Cell challenge 2025 CAPE-model}
       {Cape is a virtual cell model aimed at accurately predicting cell state after Crispri gene perturbation. I was responsible for implementing multiple loss functions including wasserstien loss using geomloss.}
+    \resumeSubItem{ACE-Hallucinations}
+    {Built hallucination-resistant LLM for Russian hallucination detection (codeforces) using Agentic Context
+  Engineering (ACE) framework. Trained Gemma-3-270M as Generator with Gemini Flash 2.5 as
+  Reflector/Curator on 380 SberQuAD-derived examples that were prepared/transformed with Gemini Flash 2.5 to learn 83 anti-hallucination strategies.
+  Achieved 0\% hallucination rate with conservative refusal behavior, deployed via llama.cpp BF16
+   GGUF for GPU inference.}
 
   \resumeSubHeadingListEnd
 
