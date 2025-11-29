@@ -78,7 +78,7 @@
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
 \resumeSubHeadingListStart
-  \item{ \textbf{ML/AI}{: PyTorch, TensorFlow, Scikit-learn, AutoML (H2O), geomloss, PEFT, SFT, RL, ONNX, CTranslate2} }
+  \item{ \textbf{ML/AI}{: PyTorch, TensorFlow, Scikit-learn, AutoML (H2O), PEFT, SFT, ONNX, CTranslate2, NLP, Google-ADK, Computer-vision, Computational Biology, Agentic-AI} }
   \item{ \textbf{Languages \& Tools}{: Python, REST/FastAPI, Gradio, Pydantic, Git, DVC, LFS, Docker, Conda} }
 \resumeSubHeadingListEnd
 
@@ -155,18 +155,24 @@ Bioprinted Grafts for Wound Healing}
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Shato Robotic Assistant}
-      {A voice controlled robotic assistant that can navigate it's environment. Built using microservices architecture and at it's core a Gemma 3 270M LLm fine tuned on a custom instruction dataset (SFT lora with unsloth). }
-    \resumeSubItem{XAI with CNNs}
-      {Fine tuned pre-trained ResNet-34 and MobileNetV2 on Caltech 101 dataset. Implemented Adversarial Attacks, Systematically evaluated model robustness against Fast Gradient Sign Method (FGSM) attacks using torchattacks. applied Grad-CAM and vanilla gradient saliency mapping for explainabilty. Implemented and evaluated defensive strategies against adversarial attacks.}
+
+    \resumeSubItem{\href{https://github.com/omar-A-hassan/Project-Shato}{Shato Robotic Assistant}}
+      {A voice controlled robotic assistant that can navigate its environment. Built using microservices architecture and at its core a Gemma-3 270M LLM fine-tuned on a custom instruction dataset (SFT LORA with Unsloth).}
+
+    \resumeSubItem{\href{https://github.com/omar-A-hassan/Adversarial-attacks-and-XAI-on-CNNS}{XAI with CNNs}}
+      {Fine tuned pre-trained ResNet-34 and MobileNetV2 on Caltech 101 dataset. Implemented adversarial attacks, systematically evaluated model robustness against FGSM attacks using torchattacks; applied Grad-CAM and vanilla gradient saliency mapping for explainability. Also implemented and evaluated defensive strategies against adversarial attacks.}
+
     \resumeSubItem{Virtual Cell challenge 2025 CAPE-model}
-      {Cape is a virtual cell model aimed at accurately predicting cell state after Crispri gene perturbation. I was responsible for implementing multiple loss functions including wasserstien loss using geomloss.}
-    \resumeSubItem{ACE-Hallucinations}
-    {Built hallucination-resistant LLM for Russian hallucination detection (codeforces) using Agentic Context
-  Engineering (ACE) framework. Trained Gemma-3-270M as Generator with Gemini Flash 2.5 as
-  Reflector/Curator on 380 SberQuAD-derived examples that were prepared/transformed with Gemini Flash 2.5 to learn 83 anti-hallucination strategies.
-  Achieved 0\% hallucination rate with conservative refusal behavior, deployed via llama.cpp BF16
-   GGUF for GPU inference.}
+      {Cape is a virtual cell model aimed at accurately predicting cell state after CRISPRi gene perturbation. I was responsible for implementing multiple loss functions including Wasserstein loss using geomloss.}
+
+    \resumeSubItem{\href{https://github.com/omar-A-hassan/ACE-Hallucinations}{ACE-Hallucinations}}
+      {Built hallucination-resistant LLM for Russian hallucination detection (Codeforces) using an agentic context engine (ACE). Trained Gemma-3 270M as Generator with Gemini Flash 2.5 as Reflector/Curator on a SberQuAD-derived dataset; developed 83 anti-hallucination strategies; deployed via llama.cpp BF16 GGUF for GPU inference.}
+
+    \resumeSubItem{\href{https://github.com/MIA-AI-Team/HireWorkflow-AI}{HireWorkflow AI}}
+      {As part of an Agentic AI Hackathon with IBM watsonx Orchestrate. HireWorkflow is a multi-agent recruitment automation system using IBM watsonx Orchestrate that screens candidates through CV analysis and GitHub code quality assessment. Architected 4 collaborative agents (Orchestrator, CV Parser, GitHub Analyzer, Grading) with React/Planner patterns. Integrated MCP tools (GitHub Toolkit, PDF Toolkit) and built custom tools for Google Drive OAuth. Deployed with Node.js/Express backend, achieving ~80\% reduction in screening time.}
+
+    \resumeSubItem{\href{https://github.com/omar-A-hassan/Simple-protein-agent}{Simple Protein Agent}}
+      {As part of Google AI Agents Intensive. Built an agentic system to democratize protein engineering by converting natural language into validated protein designs. Orchestrated Gemini 2.5 for biological reasoning and Apple’s SimpleFold for structure prediction using Google ADK. Engineered a novel sequential loading pipeline for ESM-3B and SimpleFold that reduces peak memory requirements by 50\% (24 GB → 12 GB) to enable execution on standard consumer GPUs.}
 
   \resumeSubHeadingListEnd
 
