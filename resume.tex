@@ -1,7 +1,7 @@
 
 
 \documentclass[letterpaper,11pt]{article}
-
+\setlength{\footskip}{4.08003pt}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -89,7 +89,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Alexandria university}{Alexandria, EG}
-      {Bachelor of Engineering in Biomedical Engineering;  GPA: 3.13}{Aug. 2022 -- Dec. 2027}
+      {Bachelor of Engineering in Biomedical Engineering;  GPA: 3.2}{Aug. 2022 -- Dec. 2027}
   \resumeSubHeadingListEnd
 
 
@@ -105,9 +105,8 @@
           {Added benchmarking support of ARZ Egyptian Arabic text translation to English and vice versa to (LM Evaluation Harness) with Meta's Nllb200 measuring BLEU, CHRF and BERT scores. }
         \resumeItem{Benchmark Whisper}
           {Expanded upon an already establish Speech to Text models evaluation and benchmarking framework (Pico-Voice) to benchmark OpenAI's Whisper capabilities in Transcribing ARZ Egyptian Arabic speech into Arabic and English text measuring RTF, WER and BLEU scores.}
-          \resumeItem{Blind Navigation Detection Service}
+         \resumeItem{Blind Navigation Detection Service}
           {Built a real-time spatial awareness system using YOLOv8 with RGB-D depth fusion; replaced tracking with a stateless 5×3 zone-grid and priority-debouncing pipeline, filtering 83 percent of visual noise into clear navigation audio at 5.7× native GPU speed.}
-        
       \resumeItemListEnd
 
       \resumeSubheading
@@ -153,8 +152,29 @@ Bioprinted Grafts for Wound Healing}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-
+  
+%-----------Open source contributions-----------------
+%-----------Open Source Contributions-----------------
+%-----------Open Source Contributions-----------------
+\section{Open Source Contributions}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Apple Core ML Tools}{\href{https://github.com/apple/coremltools}{github.com/apple/coremltools}}
+      {Open Source Contributor}{2025 -- Present}
+      \resumeItemListStart
+        
+        \resumeItem{Graph Optimization}
+          {Prevented unsafe graph optimization passes for multi-layer LSTMs, ensuring graph integrity and stability during model conversion. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)}}
+          
+        \resumeItem{Feature Implementation}
+          {Implemented \texttt{l1\_loss} (Mean Absolute Error) as a composite operation in Model Intermediate Language (MIL), expanding the library's loss function support. \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
+          
+        \resumeItem{Documentation}
+          { refined technical documentation for quantization workflows, improving accuracy for developer onboarding. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
+          
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+ 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
