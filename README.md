@@ -6,4 +6,4 @@ LaTeX source for my resume. GitHub Actions builds the PDF and deploys it to Page
 - [OmarHassan_CV.pdf](OmarHassan_CV.pdf)
 - [Published CV](https://omar-a-hassan.github.io/resume/)
 
-Last updated: 2026-02-09
+Last updated: 2026-02-25
