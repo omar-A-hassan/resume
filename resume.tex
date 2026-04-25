@@ -41,6 +41,10 @@
   }
 }
 
+\newcommand{\resumeBullet}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -53,9 +57,9 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -71,7 +75,7 @@
 
 \vspace{2pt}
 \begin{center}
-\small{Biomedical Engineering student specializing in AI/ML at the intersection of life science applications and agentic systems. Contributor to Apple CoreML Tools and open-source AI projects. Experienced across computer vision, signal processing, computational biology, and multi-agent systems.}
+\small{\textbf{I build models, benchmarks, and agents for science.} My work spans protein design, biomedical research tooling, Egyptian Arabic evaluation, and efficient vision systems; contributor to Apple CoreML Tools and Kayba ACE.}
 \end{center}
 \vspace{-6pt}
 
@@ -80,7 +84,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Alexandria University}{Alexandria, Egypt}
-      {Bachelor of Engineering in Biomedical Engineering \textnormal{--- GPA: 3.2/4.0}}{Aug. 2022 -- Dec. 2027}
+      {Bachelor of Engineering in Biomedical Engineering}{Expected Dec. 2027}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
@@ -91,105 +95,73 @@
       {Made in Alexandria (M.I.A) Robotics}{Alexandria, Egypt}
       {AI Engineer}{Sep. 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Blind Navigation Detection Service}
-          {Built a real-time spatial awareness system using YOLOv8 with RGB-D depth fusion; replaced object tracking with a stateless 5$\times$3 zone-grid and priority-debouncing pipeline, reducing visual noise alerts by 83\% while running at 5.7$\times$ native GPU throughput.}
-        \resumeItem{Egyptian Arabic NLP Benchmarking}
-          {Extended LM Evaluation Harness to support ARZ Egyptian Arabic translation benchmarking with Meta's NLLB-200 (BLEU, chrF, BERTScore); separately expanded a Picovoice ASR framework to evaluate OpenAI Whisper on Arabic-to-English transcription (WER, RTF, BLEU).}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {SmartCI Center, Faculty of Engineering}{Alexandria, Egypt}
-      {TinyML Research Intern}{Oct. 2025 -- Jan. 2026}
-      \resumeItemListStart
-        \resumeItem{Caption-LSTM}
-          {Investigated LSTM-based image captioning as a lightweight alternative to Vision Transformers for deployment on resource-constrained edge devices; benchmarking inference latency and memory footprint against ViT baselines.}
+        \resumeBullet{Built a real-time obstacle-awareness pipeline for an indoor assistive robot for visually impaired users, using YOLO with zone-based spatial reasoning and depth-aware priority scoring to classify obstacles by type, location, and urgency for TTS navigation alerts; reduced alert volume by 83.7\% and improved inference throughput 5.7$\times$ with a hybrid ONNX/MPS deployment architecture.}
+        \resumeBullet{Extended open-source evaluation tooling for Egyptian Arabic speech and translation, adapting Whisper benchmarking to MasriSpeech with Arabic normalization and WER/BLEU/RTF reporting, and adding Egyptian Arabic$\leftrightarrow$English LM Evaluation Harness tasks for NLLB-200 with BLEU, chrF, and TER.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Scientific Innovation Dynamics (SID)}{Alexandria, Egypt}
       {Applied ML \& AI Researcher}{Jul. 2024 -- Sep. 2025}
       \resumeItemListStart
-        \resumeItem{GPU-Accelerated PCG Pipeline}
-          {Migrated a SciPy-based signal processing pipeline for 8,000 PCG recordings to a PyTorch Dataset class with GPU acceleration (P100), cutting processing time from 5 hours to 40 minutes --- an 8$\times$ speedup.}
-        \resumeItem{CNN Heartsound Classifier}
-          {Built a CNN classifier for pathological heart sound detection using MFCCs, achieving F1 = 0.70 on an imbalanced multi-source dataset.}
-        \resumeItem{Microfluidic Cell Separation}
-          {Designed an end-to-end microfluidic cell separator using live-cell microscopy imagery; replaced conventional cell staining with a YOLOv11 detection model trained on 1.8M+ phase-contrast images (mAP50: 0.702, Precision: 0.813, Recall: 0.581).}
+        \resumeBullet{Migrated a phonocardiogram processing pipeline for 8,000 recordings from SciPy scripts to a GPU-accelerated PyTorch dataset workflow on P100, cutting runtime from 5 hours to 40 minutes.}
+        \resumeBullet{Built ML systems for biomedical signal and imaging tasks, including a heart-sound classifier using MFCCs and a stain-free cell-detection pipeline trained on 1.8M+ phase-contrast microscopy images for microfluidic cell separation.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Esri North Africa}{Cairo, Egypt}
       {GIS \& Geo-AI Intern}{Jun. 2025 -- Jul. 2025}
       \resumeItemListStart
-        \resumeItem{Presto-GeoAI (\#37 globally on Zindi)}
-          {Fine-tuned Presto, a foundational Geo-AI model, for multi-class crop classification across Africa; ranked \textbf{\#37} out of hundreds of global participants on Zindi. Developed an ArcGIS export layer to visualize model outputs as a feature layer within Esri's ArcGIS suite.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Faculty of Dentistry, STDF Grant Proposal}{Alexandria, Egypt}
-      {Research Intern}{May 2025 -- Jun. 2025}
-      \resumeItemListStart
-        \resumeItem{AI-Assisted 3D Bioprinted Scaffold Design}
-          {Proposed and co-authored an AI-driven approach for patient-specific Bioink formulation and wound-healing scaffold optimization, targeting maximum biocompatibility and therapeutic potency.}
+        \resumeBullet{Fine-tuned the PRESTO satellite foundation model for multi-class crop classification across Africa and ranked \textbf{\#37} globally on Zindi; built a GeoJSON/ArcGIS export pipeline to visualize predictions as feature layers in Esri workflows.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 %-----------OPEN SOURCE CONTRIBUTIONS-----------------
-\section{Open Source Contributions}
+\section{Open Source}
   \resumeSubHeadingListStart
 
     \resumeSubheading
       {Apple CoreML Tools \textnormal{\textit{(Python framework for ML model conversion)}}}{\href{https://github.com/apple/coremltools}{github.com/apple/coremltools}}
       {Open Source Contributor}{2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Graph Optimization}
-          {Prevented unsafe graph optimization passes for multi-layer LSTMs, ensuring model graph integrity during conversion. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)}}
-        \resumeItem{Feature Implementation}
-          {Implemented \texttt{l1\_loss} (MAE) as a composite operation in Model Intermediate Language (MIL), expanding loss function coverage. \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
-        \resumeItem{Documentation}
-          {Improved quantization workflow documentation for accuracy and developer onboarding clarity. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
+        \resumeBullet{Fixed unsafe graph optimization behavior for multi-layer LSTM conversion and implemented \texttt{l1\_loss} as a composite MIL operation, improving model-conversion correctness and loss-function coverage. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)} \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
+        \resumeBullet{Improved quantization workflow documentation for developer clarity and onboarding. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
       \resumeItemListEnd
 
     \resumeSubheading
       {Kayba AI --- Agentic Context Engine (ACE)}{\href{https://github.com/kayba-ai/agentic-context-engine}{github.com/kayba-ai/agentic-context-engine}}
       {Open Source Contributor}{2026 -- Present}
       \resumeItemListStart
-        \resumeItem{MCP Server Integration}
-          {Engineered an optional MCP server for ACE, enabling external clients to securely access its reusable tool services over \texttt{stdio}. \href{https://github.com/kayba-ai/agentic-context-engine/pull/89}{(PR \#89)}}
+        \resumeBullet{Added an optional ACE MCP server with session-scoped tools, \texttt{stdio} transport, CLI packaging, safety guards, and test coverage, enabling external clients to use ACE through MCP. \href{https://github.com/kayba-ai/agentic-context-engine/pull/89}{(PR \#89)}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Selected Projects}
   \resumeSubHeadingListStart
 
     \resumeSubItem{\href{https://github.com/omar-A-hassan/medsci-agent}{MedSci Agent}}
-      {Biomedical research multi-agent system with 28 MCP tools powered by MedGemma, TxGemma, and OpenCode. Capabilities include drug ADMET prediction, protein structure search, single-cell RNA-seq analysis, medical image interpretation, and literature retrieval. Built for the MedGemma Impact Challenge.}
+      {Open-source biomedical research agent exposing 28 MCP tools across drug discovery, protein analysis, omics, literature retrieval, medical imaging, and sandboxed execution, using MedGemma and TxGemma locally via Ollama with a long-running Python sidecar for scientific workloads.}
+
+    \resumeSubItem{\href{https://github.com/omar-A-hassan/PaperPing}{PaperPing}}
+      {Local-first iMessage research agent that ingests arXiv links and PDFs, answers follow-up questions with persistent 3-tier memory, supports deep paper reading and figure understanding, and sends automated morning briefings using Bun, SQLite, FTS5, and multi-step LLM tool calling. \href{https://paperping-web.vercel.app/}{Product website}.}
 
     \resumeSubItem{\href{https://github.com/MIA-AI-Team/HireWorkflow-AI}{HireWorkflow AI}}
-      {Multi-agent recruitment automation system built for an IBM watsonx Orchestrate Hackathon. Architected 4 collaborative agents (Orchestrator, CV Parser, GitHub Analyzer, Grader) with React/Planner patterns; integrated MCP tools and Google Drive OAuth; achieved $\sim$80\% reduction in candidate screening time.}
+      {Multi-agent hiring workflow for technical recruiting that jointly evaluates resumes and GitHub repositories, orchestrating candidate parsing, code-aware validation, scoring, and downstream workflow automation to reduce manual screening time and ATS-style false negatives.}
 
     \resumeSubItem{\href{https://github.com/omar-A-hassan/Simple-protein-agent}{Simple Protein Agent}}
-      {Agentic protein design system built during Google AI Agents Intensive. Orchestrates Gemini 2.5 for biological reasoning and Apple SimpleFold for structure prediction via Google ADK. Engineered a sequential model-loading pipeline reducing peak GPU memory by 50\% (24 GB $\rightarrow$ 12 GB).}
-
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/ACE-Hallucinations}{ACE-Hallucinations}}
-      {Hallucination-resistant LLM for a Russian QA detection task (Codeforces). Generator: Gemma-3 270M; Reflector/Curator: Gemini Flash 2.5; trained on SberQuAD-derived data with 83 anti-hallucination strategies; deployed via \texttt{llama.cpp} BF16 GGUF.}
-
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/Project-Shato}{SHATO Robotic Assistant}}
-      {Voice-controlled ROV assistant built with a microservices architecture (FastAPI, Docker). Core LLM: Gemma-3 270M fine-tuned via SFT + LoRA (Unsloth) on 268 synthetic command examples; integrated Whisper STT and Parler TTS.}
-
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/Adversarial-attacks-and-XAI-on-CNNS}{XAI with CNNs}}
-      {Fine-tuned ResNet-34 and MobileNetV2 on Caltech-101; evaluated adversarial robustness under FGSM attacks (torchattacks); applied Grad-CAM and vanilla gradient saliency maps for explainability; implemented and benchmarked defensive countermeasures.}
+      {Protein design agent built with Google ADK, Gemini, and Apple SimpleFold that generates candidate sequences from natural-language specifications and predicts 3D structures; engineered a sequential ESM-3B $\rightarrow$ SimpleFold pipeline that reduced peak memory from about 24 GB to about 12 GB.}
 
   \resumeSubHeadingListEnd
 
 %--------SKILLS------------
 \section{Skills}
 \resumeSubHeadingListStart
-  \item{\textbf{ML/AI}{: PyTorch, TensorFlow, Scikit-learn, PEFT/SFT (LoRA, Unsloth), ONNX, CTranslate2, Google ADK, Computer Vision, NLP, Computational Biology, Agentic AI, AutoML (H2O)}}
-  \item{\textbf{Languages \& Tools}{: Python, FastAPI, Pydantic, Docker, Git, DVC, Conda, Gradio, MCP}}
+  \item{\textbf{Languages}{: Python, TypeScript, SQL}}
+  \item{\textbf{ML/AI}{: PyTorch, ONNX, Computer Vision, Speech/ASR, Arabic NLP, Multimodal \& Agentic Systems}}
+  \item{\textbf{Systems}{: FastAPI, Docker, SQLite, Git}}
+  \item{\textbf{Scientific Computing}{: Scanpy, RDKit, BioPython}}
 \resumeSubHeadingListEnd
 
 \end{document}
