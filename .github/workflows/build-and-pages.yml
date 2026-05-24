@@ -2,12 +2,16 @@ name: Build resume and deploy pages
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "resume.tex"
+      - "index.html"
+      - ".github/workflows/build-and-pages.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -28,42 +32,6 @@ jobs:
           latexmk -pdf -interaction=nonstopmode -halt-on-error -jobname=OmarHassan_CV resume.tex
           latexmk -c
 
-      - name: Update README date
-        id: last_updated
-        run: |
-          DATE=$(python3 scripts/update_readme_date.py --print-date | tr -d '\n' | tr -d '\r')
-          echo "date=$DATE" >> "$GITHUB_OUTPUT"
-
-      - name: Generate index.html
-        env:
-          LAST_UPDATED: ${{ steps.last_updated.outputs.date }}
-        run: |
-          cat <<EOF > index.html
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <title>Omar Hassan — CV</title>
-            <style>
-              body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-              main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
-              header { margin-bottom: 1.5rem; }
-              .viewer { width: 100%; height: 80vh; border: 1px solid #ccc; }
-            </style>
-          </head>
-          <body>
-            <main>
-              <header>
-                <h1>Omar Hassan — CV</h1>
-                <p><a href="OmarHassan_CV.pdf">Download the PDF</a></p>
-                <p>Last updated: ${LAST_UPDATED}</p>
-              </header>
-              <embed class="viewer" src="OmarHassan_CV.pdf#zoom=FitH" type="application/pdf" />
-            </main>
-          </body>
-          </html>
-          EOF
-
       - name: Prepare Pages artifact
         run: |
           mkdir -p public
@@ -79,23 +47,11 @@ jobs:
         with:
           path: public
 
-      - name: Commit changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md OmarHassan_CV.pdf index.html
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update generated resume artifacts"
-            git push origin HEAD
-          fi
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
