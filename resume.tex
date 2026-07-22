@@ -87,35 +87,51 @@
       {Bachelor of Engineering in Biomedical Engineering \textnormal{--- GPA: 3.2/4.0}}{Expected Dec. 2027}
   \resumeSubHeadingListEnd
 
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+  \item{\textbf{Languages}{: Python, TypeScript, R, SQL}}
+  \item{\textbf{ML/AI \& Systems}{: PyTorch, ONNX, Computer Vision, Computational Biology, Multimodal \& Agentic Systems, FastAPI, Docker, Git}}
+  \item{\textbf{Bioinformatics}{: PLINK2, Population Genetics/GWAS, RDKit}}
+\resumeSubHeadingListEnd
+
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
+      {Alexandria University --- Faculty of Engineering}{Alexandria, Egypt}
+      {Bioinformatics Research Intern (advised by Dr. Noha Yousri)}{Jun. 2026 -- Present}
+      \resumeItemListStart
+        \resumeBullet{Built a GWAS and population-genetics pipeline on a 156-individual Qatari cohort (67,735 QC'd SNPs), covering PCA, clustering, kinship, and heritability estimation in PLINK2 and R.}
+        \resumeBullet{Trained a Lasso classifier on a 32-metabolite diabetes signature, reaching 0.917 balanced accuracy and 0.996 AUC, reproducing established diabetes biology (glucose, mannose, 1,5-anhydroglucitol).}
+        \resumeBullet{Ran mixed-model mQTL mapping across $\sim$2.17M SNP-metabolite pairs, correcting for population stratification and relatedness and reducing genomic inflation ($\lambda$) from 1.133 to $\leq$1.02.}
+      \resumeItemListEnd
+
+    \resumeSubheading
       {Made in Alexandria (M.I.A) Robotics}{Alexandria, Egypt}
       {AI Engineer}{Sep. 2025 -- Jun. 2026}
       \resumeItemListStart
-        \resumeBullet{\textbf{Optimized video annotation workflows} by adding SAM 3 / EdgeTAM video-backend support to X-AnyLabeling via \texttt{sam3.cpp}, enabling fast Apple Silicon local inference and near-hands-free labeling for large datasets.}
-        \resumeBullet{\textbf{Developed a training-free positive-unlabeled object detection system} for
-  FathomNetCLEF 2026, combining Grounding DINO, DINOv3, and cosine-similarity to detect 32 marine
-  species; achieved 0.230 mAP and ranked \textbf{\#1} on the first week on the public leaderboard.}
-        \resumeBullet{\textbf{Built a real-time obstacle-awareness pipeline} for an indoor assistive robot for visually impaired users, using YOLO with zone-based spatial reasoning and depth-aware priority scoring to classify obstacles by type, location, and urgency for TTS navigation alerts; reduced alert volume by 83.7\% and improved inference throughput 5.7$\times$ with a hybrid ONNX/MPS deployment architecture.}
-        \resumeBullet{\textbf{Extended open-source evaluation tooling for Egyptian Arabic speech and translation}, adapting Whisper benchmarking to MasriSpeech with Arabic normalization and WER/BLEU/RTF reporting, and adding Egyptian Arabic$\leftrightarrow$English LM Evaluation Harness tasks for NLLB-200 with BLEU, chrF, and TER.}
+        \resumeBullet{Added SAM 3/EdgeTAM video-backend support to X-AnyLabeling (\texttt{sam3.cpp}), enabling fast Apple Silicon inference and near-hands-free annotation for large datasets.}
+        \resumeBullet{Built a training-free detection system for FathomNetCLEF 2026 (Grounding DINO + DINOv3 + cosine-similarity), ranking \#1 on the public leaderboard in week one (0.230 mAP).}
+        \resumeBullet{Built a real-time obstacle-awareness pipeline for an assistive robot (YOLO, depth-aware priority scoring), cutting alert volume 83.7\% and boosting inference throughput 5.7$\times$ with a hybrid ONNX/MPS deployment.}
+        \resumeBullet{Extended Whisper/NLLB-200 evaluation tooling for Egyptian Arabic --- adapted benchmarking to MasriSpeech (WER/BLEU/RTF) and added Egyptian Arabic$\leftrightarrow$English tasks to the LM Evaluation Harness (BLEU, chrF, TER).}
       \resumeItemListEnd
 
     \resumeSubheading
       {Scientific Innovation Dynamics (SID)}{Alexandria, Egypt}
       {Applied ML \& AI Researcher}{Jul. 2024 -- Sep. 2025}
       \resumeItemListStart
-        \resumeBullet{Migrated a phonocardiogram processing pipeline for 8,000 recordings from SciPy scripts to a GPU-accelerated PyTorch dataset workflow on P100, cutting runtime from 5 hours to 40 minutes.}
-        \resumeBullet{Built ML systems for biomedical signal and imaging tasks, including a heart-sound classifier using MFCCs and a stain-free cell-detection pipeline trained on 1.8M+ phase-contrast microscopy images for microfluidic cell separation.}
+        \resumeBullet{Migrated an 8,000-recording phonocardiogram pipeline from SciPy to GPU-accelerated PyTorch (P100), cutting runtime from 5 hours to 40 minutes.}
+        \resumeBullet{Built an MFCC-based heart-sound classifier for phonocardiogram signal analysis.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Esri North Africa}{Cairo, Egypt}
       {GIS \& Geo-AI Intern}{Jun. 2025 -- Jul. 2025}
       \resumeItemListStart
-        \resumeBullet{Fine-tuned the PRESTO satellite foundation model for multi-class crop classification across Africa and ranked \textbf{\#37} globally on Zindi; built a GeoJSON/ArcGIS export pipeline to visualize predictions as feature layers in Esri workflows.}
+        \resumeBullet{Fine-tuned the PRESTO satellite foundation model for multi-class crop classification across Africa, ranking \#37 globally on Zindi.}
+        \resumeBullet{Built a GeoJSON/ArcGIS export pipeline to visualize predictions as feature layers in Esri workflows.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -128,8 +144,9 @@
       {Apple CoreML Tools \textnormal{\textit{(Python framework for ML model conversion)}}}{\href{https://github.com/apple/coremltools}{github.com/apple/coremltools}}
       {Open Source Contributor}{2025 -- Present}
       \resumeItemListStart
-        \resumeBullet{Fixed unsafe graph optimization behavior for multi-layer LSTM conversion and implemented \texttt{l1\_loss} as a composite MIL operation, improving model-conversion correctness and loss-function coverage. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)} \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
-        \resumeBullet{Improved quantization workflow documentation for developer clarity and onboarding. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
+        \resumeBullet{Fixed a \texttt{fuse\_stack\_split} graph-optimization crash on multi-layer LSTM conversion, tracing the root cause to a mistracked squeeze-op variable. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)}}
+        \resumeBullet{Implemented \texttt{l1\_loss} for the PyTorch-to-CoreML frontend, covering all reduction modes with full test coverage. \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
+        \resumeBullet{Fixed an incorrect axis value in ArgMax/ArgMin documentation examples in \texttt{NeuralNetwork.proto}. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -145,31 +162,38 @@
 \section{Selected Projects}
   \resumeSubHeadingListStart
 
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/HemoRL-Bench}{HemoRL-Bench}}
-      {Procedural benchmark for formula-verified coronary FFR reasoning, generating natural-language stenosis problems from a reduced-order pressure-drop model with unit-aware deterministic rewards; trained Nemotron-3-Nano-30B with GRPO, improving Tier 3 held-out accuracy from 38.8\% to 60.0\% and finding that outcome-only RL improved classification/dominant-loss reasoning while pressure-drop and inverse-flow tasks remained limited by errors in the viscous coefficient, which scales with stenotic diameter to the fourth power.}
+    \resumeSubheading
+      {HemoRL-Bench}{\href{https://github.com/omar-A-hassan/HemoRL-Bench}{github.com/omar-A-hassan/HemoRL-Bench}}
+      {Nemotron-3-Nano-30B, GRPO, RL}{}
+      \resumeItemListStart
+        \resumeBullet{Built a procedural benchmark generating formula-verified coronary FFR word problems from a reduced-order pressure-drop model, with a deterministic, unit-aware reward verifier.}
+        \resumeBullet{Trained Nemotron-3-Nano-30B with GRPO, improving Tier 3 held-out accuracy from 38.8\% to 60.0\%.}
+      \resumeItemListEnd
 
+    \resumeSubheading
+      {MedSci Agent}{\href{https://github.com/omar-A-hassan/medsci-agent}{github.com/omar-A-hassan/medsci-agent}}
+      {MedGemma, TxGemma, MCP, Ollama}{}
+      \resumeItemListStart
+        \resumeBullet{Built an open-source biomedical research agent exposing 28 MCP tools across drug discovery, protein analysis, omics, literature retrieval, and medical imaging.}
+        \resumeBullet{Ran MedGemma and TxGemma locally via Ollama, backed by a long-running Python sidecar for scientific workloads.}
+      \resumeItemListEnd
 
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/medsci-agent}{MedSci Agent}}
-      {Open-source biomedical research agent exposing 28 MCP tools across drug discovery, protein analysis, omics, literature retrieval, medical imaging, and sandboxed execution, using MedGemma and TxGemma locally via Ollama with a long-running Python sidecar for scientific workloads.}
+    \resumeSubheading
+      {PaperPing}{\href{https://paperping-web.vercel.app/}{paperping-web.vercel.app}}
+      {Bun, SQLite, FTS5, LLM tool calling}{}
+      \resumeItemListStart
+        \resumeBullet{Built a local-first iMessage research agent that ingests arXiv links and PDFs, answers follow-up questions, and supports deep paper reading with figure understanding.}
+        \resumeBullet{Implemented persistent 3-tier memory and automated morning paper briefings via multi-step LLM tool calling.}
+      \resumeItemListEnd
 
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/PaperPing}{PaperPing}}
-      {Local-first iMessage research agent that ingests arXiv links and PDFs, answers follow-up questions with persistent 3-tier memory, supports deep paper reading and figure understanding, and sends automated morning briefings using Bun, SQLite, FTS5, and multi-step LLM tool calling. \href{https://paperping-web.vercel.app/}{Product website}.}
-
-    \resumeSubItem{\href{https://github.com/MIA-AI-Team/HireWorkflow-AI}{HireWorkflow AI}}
-      {Multi-agent hiring workflow for technical recruiting that jointly evaluates resumes and GitHub repositories, orchestrating candidate parsing, code-aware validation, scoring, and downstream workflow automation to reduce manual screening time and ATS-style false negatives.}
-
-    \resumeSubItem{\href{https://github.com/omar-A-hassan/Simple-protein-agent}{Simple Protein Agent}}
-      {Protein design agent built with Google ADK, Gemini, and Apple SimpleFold that generates candidate sequences from natural-language specifications and predicts 3D structures; engineered a sequential ESM-3B $\rightarrow$ SimpleFold pipeline that reduced peak memory from about 24 GB to about 12 GB.}
+    \resumeSubheading
+      {Simple Protein Agent}{\href{https://github.com/omar-A-hassan/Simple-protein-agent}{github.com/omar-A-hassan/Simple-protein-agent}}
+      {Google ADK, Gemini, Apple SimpleFold}{}
+      \resumeItemListStart
+        \resumeBullet{Built a protein design agent that generates amino-acid sequences from natural-language specs and predicts 3D structure.}
+        \resumeBullet{Engineered a sequential ESM-3B $\rightarrow$ SimpleFold pipeline, cutting peak memory from about 24 GB to about 12 GB.}
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-%--------SKILLS------------
-\section{Skills}
-\resumeSubHeadingListStart
-  \item{\textbf{Languages}{: Python, TypeScript, SQL}}
-  \item{\textbf{ML/AI}{: PyTorch, ONNX, Computer Vision, Speech/ASR, Arabic NLP, Multimodal \& Agentic Systems}}
-  \item{\textbf{Systems}{: FastAPI, Docker, SQLite, Git}}
-  \item{\textbf{Scientific Computing}{: Scanpy, RDKit, BioPython}}
-\resumeSubHeadingListEnd
 
 \end{document}
