@@ -181,26 +181,26 @@
 
     \resumeSubheading
       {HemoRL-Bench}{\href{https://github.com/omar-A-hassan/HemoRL-Bench}{github.com/omar-A-hassan/HemoRL-Bench}}
-      {Nemotron-3-Nano-30B, GRPO, RL}{}
+      {Nemotron-3-Nano-30B, GRPO, verifiable rewards}{}
       \resumeItemListStart
-        \resumeBullet{Built a benchmark that generates coronary FFR word problems from a reduced-order pressure-drop model, with a deterministic verifier for the formula and units.}
-        \resumeBullet{Trained NVIDIA Nemotron-3-Nano-30B-A3B with GRPO, raising held-out Tier 3 accuracy from 38.8\% to 60.0\%.}
+        \resumeBullet{Built a generator of coronary blood-flow problems (fractional flow reserve) whose answers a formula checks exactly, so reinforcement learning gets a reliable reward.}
+        \resumeBullet{Trained NVIDIA Nemotron-3-Nano-30B-A3B with GRPO, raising accuracy on the hardest problems, which need a six-step derivation, from 38.8\% to 60.0\%.}
       \resumeItemListEnd
 
     \resumeSubheading
       {wax-ot}{\href{https://github.com/omar-A-hassan/wax-ot}{github.com/omar-A-hassan/wax-ot}}
-      {Optimal transport, layer-wise relevance propagation, NumPy/POT}{}
+      {Optimal transport, NumPy/POT \textnormal{--- published on PyPI}}{}
       \resumeItemListStart
-        \resumeBullet{Reimplemented WaX (Naumann et al., \textit{IEEE TPAMI} 2026, no public implementation), which attributes a Wasserstein distance to the instance pairs, features, and subspaces that cause it.}
-        \resumeBullet{Verified the port against the method's conservation property ($\sum R_i = \sum R_{kl} = W_p$) and five baselines on seven UCI datasets; published on PyPI.}
+        \resumeBullet{Reimplemented WaX (Naumann et al., \textit{IEEE TPAMI} 2026, no public code), which shows which data points and features cause a Wasserstein distance between two datasets.}
+        \resumeBullet{Verified the port by confirming that the attributions sum exactly to the distance, and compared it with five baselines on seven UCI datasets.}
       \resumeItemListEnd
 
     \resumeSubheading
       {MedSci Agent}{\href{https://github.com/omar-A-hassan/medsci-agent}{github.com/omar-A-hassan/medsci-agent}}
       {MedGemma, TxGemma, MCP, Ollama}{}
       \resumeItemListStart
-        \resumeBullet{Built an open-source agent for biomedical research that exposes 28 MCP tools for drug discovery, protein analysis, omics, literature, and medical imaging.}
-        \resumeBullet{Ran MedGemma and TxGemma locally with Ollama, and used a long-running Python sidecar for scientific work.}
+        \resumeBullet{Built an open-source biomedical research agent with 28 tools for drug discovery, protein analysis, omics, literature, and medical imaging, served over MCP.}
+        \resumeBullet{Kept RDKit, BioPython, and Scanpy in a resident process, removing a 2--5 second import cost on every tool call.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -208,7 +208,7 @@
       {Google ADK, Gemini, Apple SimpleFold}{}
       \resumeItemListStart
         \resumeBullet{Built an agent that generates amino-acid sequences from a description in natural language, then predicts the 3D structure.}
-        \resumeBullet{Built a sequential ESM-3B to SimpleFold pipeline, cutting peak memory from about 24 GB to about 12 GB.}
+        \resumeBullet{Ran ESM-3B and SimpleFold one after the other instead of together, halving peak memory from about 24 GB to about 12 GB.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
