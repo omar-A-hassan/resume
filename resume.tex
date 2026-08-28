@@ -62,7 +62,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=3pt,topsep=3pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -102,37 +102,37 @@
       {Nile University --- Center for Informatics Science}{Cairo, Egypt}
       {AI in Antibody Structure and Design Research Intern (adv. Prof. Mai S. Mabrouk)}{Jul. 2026 -- Aug. 2026}
       \resumeItemListStart
-        \resumeBullet{Built a benchmark of 597 nanobodies from SAbDab with one shared RMSD pipeline. Scored SimpleFold, NanoBodyBuilder2, and teammate-supplied IgFold predictions under the same conditions.}
-        \resumeBullet{Showed that a general protein model almost matches antibody specialists on nanobodies. SimpleFold gave a median CDR-H3 RMSD of 2.94\,\AA{}, against 2.885\,\AA{} for IgFold and 2.484\,\AA{} for NanoBodyBuilder2. The three framework RMSD values agree to within 0.034\,\AA{}.}
-        \resumeBullet{Built a confidence signal that needs no training. The spread of repeated flow samples separated hard targets from easy targets at AUC 0.786, and it correlated with CDR-H3 error at $\rho=0.41$ to 0.43.}
-        \resumeBullet{Showed the limit of inference-time sampling. Across 3,200 folds on 30 hard targets, only 2 targets reached 2\,\AA{} CDR-H3 RMSD in 80 samples. The remaining errors come from the model, not from too few samples.}
-        \resumeBullet{Verified a port of NTKMirror with identity, gradient, and NTK-field tests. A shared global gate did not improve held-out CDR-H3 accuracy. This negative result redirected the project.}
+        \resumeBullet{Built a benchmark of 597 nanobodies from SAbDab that scores SimpleFold, NanoBodyBuilder2, and teammate-supplied IgFold through one RMSD pipeline.}
+        \resumeBullet{Showed a general protein model almost matches antibody specialists: median CDR-H3 RMSD 2.944\,\AA{} for SimpleFold, against 2.885\,\AA{} for IgFold and 2.484\,\AA{} for NanoBodyBuilder2.}
+        \resumeBullet{Built a confidence signal that needs no training, using the spread of repeated flow samples to separate hard targets from easy ones at AUC 0.786.}
+        \resumeBullet{Showed the limit of inference-time sampling: across 3,200 folds on 30 hard targets, only 2 reached 2\,\AA{} CDR-H3 RMSD.}
+        \resumeBullet{Verified an NTKMirror port with identity, gradient, and NTK-field tests, then showed a shared global gate does not improve held-out CDR-H3 accuracy.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Alexandria University --- Faculty of Engineering}{Alexandria, Egypt}
       {Bioinformatics Research Intern (adv. Dr. Noha Yousri)}{Jun. 2026 -- Present}
       \resumeItemListStart
-        \resumeBullet{Built a pipeline for GWAS and population genetics on a Qatari cohort of 156 people and 67,735 SNPs after quality control. The pipeline covers PCA, clustering, kinship, and heritability, in PLINK2 and R.}
-        \resumeBullet{Trained a Lasso classifier on a signature of 32 metabolites for diabetes. It reached 0.917 balanced accuracy and 0.996 AUC, and it recovered known diabetes biology: glucose, mannose, and 1,5-anhydroglucitol.}
-        \resumeBullet{Mapped mQTLs with a mixed model across about 2.17M SNP-metabolite pairs. Correction for population structure and relatedness reduced the genomic inflation $\lambda$ from 1.133 to 1.02 or less.}
+        \resumeBullet{Built a GWAS and population-genetics pipeline in PLINK2 and R on a Qatari cohort of 156 people and 67,735 SNPs, covering PCA, clustering, kinship, and heritability.}
+        \resumeBullet{Trained a Lasso classifier on a 32-metabolite diabetes signature to 0.917 balanced accuracy and 0.996 AUC, recovering known markers (glucose, mannose, 1,5-anhydroglucitol).}
+        \resumeBullet{Mapped mQTLs with a mixed model across about 2.17M SNP-metabolite pairs, cutting genomic inflation $\lambda$ from 1.133 to 1.02 or less.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Made in Alexandria (M.I.A) Robotics}{Alexandria, Egypt}
       {AI Engineer}{Sep. 2025 -- Present}
       \resumeItemListStart
-        \resumeBullet{Built a detection system for FathomNetCLEF 2026 that needs no training. It combines Grounding DINO, DINOv3, and cosine similarity, and it reached \#1 on the public leaderboard at 0.230 mAP.}
-        \resumeBullet{Built a pipeline for real-time obstacle awareness on an assistive robot, with YOLO and priority scores that use depth. It cut alerts by 83.7\% and raised inference throughput 5.7 times on a hybrid ONNX and MPS deployment.}
-        \resumeBullet{Added a video backend for SAM 3 and EdgeTAM to X-AnyLabeling (\texttt{sam3.cpp}). It gives fast inference on Apple Silicon and faster annotation of large datasets.}
-        \resumeBullet{Extended the evaluation tools for Whisper and NLLB-200 to Egyptian Arabic. Adapted the benchmark to MasriSpeech (WER, BLEU, RTF) and added Egyptian Arabic to English tasks to the LM Evaluation Harness.}
+        \resumeBullet{Built a detection system for FathomNetCLEF 2026 that needs no training (Grounding DINO, DINOv3, cosine similarity), reaching \#1 on the public leaderboard at 0.230 mAP.}
+        \resumeBullet{Cut alerts 83.7\% and raised inference throughput 5.7 times on a real-time obstacle pipeline for an assistive robot, using YOLO with depth-based priority scores.}
+        \resumeBullet{Added a SAM 3 and EdgeTAM video backend to X-AnyLabeling (\texttt{sam3.cpp}) for fast inference on Apple Silicon.}
+        \resumeBullet{Extended Whisper and NLLB-200 evaluation to Egyptian Arabic, adapting the MasriSpeech benchmark (WER, BLEU, RTF) and adding tasks to the LM Evaluation Harness.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Scientific Innovation Dynamics (SID)}{Alexandria, Egypt}
       {Applied ML \& AI Researcher}{Jul. 2024 -- Sep. 2025}
       \resumeItemListStart
-        \resumeBullet{Moved a phonocardiogram pipeline of 8,000 recordings from SciPy to PyTorch on a P100 GPU. Runtime fell from 5 hours to 40 minutes.}
+        \resumeBullet{Moved a phonocardiogram pipeline of 8,000 recordings from SciPy to PyTorch on a P100 GPU, cutting runtime from 5 hours to 40 minutes.}
         \resumeBullet{Built a heart-sound classifier on MFCC features for phonocardiogram screening.}
       \resumeItemListEnd
 
@@ -140,7 +140,7 @@
       {Esri North Africa}{Cairo, Egypt}
       {GIS \& Geo-AI Intern}{Jun. 2025 -- Jul. 2025}
       \resumeItemListStart
-        \resumeBullet{Fine-tuned the PRESTO satellite foundation model to classify crops across Africa. Placed \#37 of about 400 on Zindi.}
+        \resumeBullet{Fine-tuned the PRESTO satellite foundation model to classify crops across Africa, placing \#37 of about 400 on Zindi.}
         \resumeBullet{Built an export pipeline for GeoJSON and ArcGIS to show predictions as feature layers in Esri workflows.}
       \resumeItemListEnd
 
@@ -154,7 +154,7 @@
       {Apple CoreML Tools \textnormal{\textit{(Python framework for ML model conversion)}}}{\href{https://github.com/apple/coremltools}{github.com/apple/coremltools}}
       {Open Source Contributor}{2025 -- 2026}
       \resumeItemListStart
-        \resumeBullet{Fixed a crash in the \texttt{fuse\_stack\_split} graph optimization on multi-layer LSTM conversion. The cause was a mistracked squeeze-op variable. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)}}
+        \resumeBullet{Fixed a crash in the \texttt{fuse\_stack\_split} graph optimization on multi-layer LSTM conversion, caused by a mistracked squeeze-op variable. \href{https://github.com/apple/coremltools/pull/2645}{(PR \#2645)}}
         \resumeBullet{Implemented \texttt{l1\_loss} for the PyTorch to CoreML frontend, with all reduction modes and full test coverage. \href{https://github.com/apple/coremltools/pull/2641}{(PR \#2641)}}
         \resumeBullet{Fixed an incorrect axis value in the ArgMax and ArgMin documentation examples in \texttt{NeuralNetwork.proto}. \href{https://github.com/apple/coremltools/pull/2640}{(PR \#2640)}}
       \resumeItemListEnd
@@ -170,7 +170,7 @@
       {Kayba AI --- Agentic Context Engine (ACE)}{\href{https://github.com/kayba-ai/agentic-context-engine}{github.com/kayba-ai/agentic-context-engine}}
       {Open Source Contributor}{2026}
       \resumeItemListStart
-        \resumeBullet{Added an optional ACE MCP server with session-scoped tools, \texttt{stdio} transport, CLI packaging, safety guards, and tests. External clients can now use ACE through MCP. \href{https://github.com/kayba-ai/agentic-context-engine/pull/89}{(PR \#89)}}
+        \resumeBullet{Added an optional ACE MCP server with session-scoped tools, \texttt{stdio} transport, CLI packaging, and safety guards, letting external clients use ACE through MCP. \href{https://github.com/kayba-ai/agentic-context-engine/pull/89}{(PR \#89)}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -183,16 +183,16 @@
       {HemoRL-Bench}{\href{https://github.com/omar-A-hassan/HemoRL-Bench}{github.com/omar-A-hassan/HemoRL-Bench}}
       {Nemotron-3-Nano-30B, GRPO, RL}{}
       \resumeItemListStart
-        \resumeBullet{Built a benchmark that generates word problems on coronary FFR from a reduced-order model of pressure drop. A deterministic verifier checks each answer against the formula and the units.}
-        \resumeBullet{Trained NVIDIA Nemotron-3-Nano-30B-A3B with GRPO. Held-out accuracy on Tier 3 rose from 38.8\% to 60.0\%.}
+        \resumeBullet{Built a benchmark that generates coronary FFR word problems from a reduced-order pressure-drop model, with a deterministic verifier for the formula and units.}
+        \resumeBullet{Trained NVIDIA Nemotron-3-Nano-30B-A3B with GRPO, raising held-out Tier 3 accuracy from 38.8\% to 60.0\%.}
       \resumeItemListEnd
 
     \resumeSubheading
       {wax-ot}{\href{https://github.com/omar-A-hassan/wax-ot}{github.com/omar-A-hassan/wax-ot}}
-      {Optimal transport, layer-wise relevance propagation, NumPy/POT}{}
+      {Optimal transport, layer-wise relevance propagation, NumPy/POT \textnormal{--- no public reference implementation}}{}
       \resumeItemListStart
-        \resumeBullet{Reimplemented WaX (Naumann et al., \textit{IEEE TPAMI} 2026), which attributes a Wasserstein distance to the instance pairs, features, and subspaces that cause it. No official implementation is public.}
-        \resumeBullet{Verified the port against the conservation property of the method ($\sum R_i = \sum R_{kl} = W_p$), and compared it with five baselines on seven UCI datasets. Published on PyPI.}
+        \resumeBullet{Reimplemented WaX (Naumann et al., \textit{IEEE TPAMI} 2026), which attributes a Wasserstein distance to the instance pairs, features, and subspaces that cause it.}
+        \resumeBullet{Verified the port against the method's conservation property ($\sum R_i = \sum R_{kl} = W_p$) and five baselines on seven UCI datasets; published on PyPI.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -208,7 +208,7 @@
       {Google ADK, Gemini, Apple SimpleFold}{}
       \resumeItemListStart
         \resumeBullet{Built an agent that generates amino-acid sequences from a description in natural language, then predicts the 3D structure.}
-        \resumeBullet{Built a sequential pipeline from ESM-3B to SimpleFold. Peak memory fell from about 24 GB to about 12 GB.}
+        \resumeBullet{Built a sequential ESM-3B to SimpleFold pipeline, cutting peak memory from about 24 GB to about 12 GB.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
